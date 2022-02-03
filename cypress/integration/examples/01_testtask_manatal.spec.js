@@ -16,8 +16,8 @@ describe("Manatal testing", () => {
     cy.findByLabelText('Agency', { timeout: 7000 }).should('exist')
     cy.findByLabelText('Company', { timeout: 7000 }).should('exist')
 
-    cy.get("#company_email_address").type("rita.leontyeva+18@candidate.manatal.com")
-    cy.get("#confirm_company_email_address").type("rita.leontyeva+18@candidate.manatal.com")
+    cy.get("#company_email_address").type("rita.leontyeva+20@candidate.manatal.com")
+    cy.get("#confirm_company_email_address").type("rita.leontyeva+20@candidate.manatal.com")
     cy.get("#password").type("Password")
     cy.get("[data-vv-name=phone]").type("098-890-7766")
     cy.get("[data-vv-name=agree]").check()
@@ -31,7 +31,7 @@ describe("Manatal testing", () => {
       const confirmText = $confirm.text();
       expect(confirmText).is.eql("A confirmation email was sent to");
     });
-    cy.contains("rita.leontyeva+18@candidate.manatal.com")
+    cy.contains("rita.leontyeva+20@candidate.manatal.com")
 
   })
 })

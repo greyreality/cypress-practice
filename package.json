@@ -2,5 +2,6 @@
     "devDependencies": {
         "cypress": "^9.4.1",
         "@testing-library/cypress": "latest"
-    }
+    },
+    "dependencies": {}
 }
