@@ -1,5 +1,6 @@
 {
   "baseUrl": "https://jb-app-frontend-staging.herokuapp.com",
+  "ignoreTestFiles": "**/examples/more_examples/*.spec.js",
   "watchForFileChanges": false,
   "defaultCommandTimout": 4000,
   "execTimeout": 60000,
