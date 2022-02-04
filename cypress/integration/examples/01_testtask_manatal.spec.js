@@ -23,8 +23,8 @@ describe("Run tests for Manatal login page", () => {
     cy.findByLabelText('Agency', { timeout: 7000 }).should('exist')
     cy.findByLabelText('Company', { timeout: 7000 }).should('exist')
 
-    cy.get("#company_email_address").type("rita.leontyeva+28@candidate.manatal.com")
-    cy.get("#confirm_company_email_address").type("rita.leontyeva+28@candidate.manatal.com")
+    cy.get("#company_email_address").type("rita.leontyeva+29@candidate.manatal.com")
+    cy.get("#confirm_company_email_address").type("rita.leontyeva+29@candidate.manatal.com")
     cy.get("[data-vv-name=agree]").check()
 
     loginPage.clickSingUpButton();
@@ -38,7 +38,7 @@ describe("Run tests for Manatal login page", () => {
       const confirmText = $confirm.text();
       expect(confirmText).is.eql("A confirmation email was sent to");
     });
-    cy.contains("rita.leontyeva+28@candidate.manatal.com")
+    cy.contains("rita.leontyeva+29@candidate.manatal.com")
 
   })
 
