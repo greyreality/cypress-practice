@@ -1,3 +1,11 @@
 {
-    "watchForFileChanges": false
+  "baseUrl": "https://jb-app-frontend-staging.herokuapp.com",
+  "watchForFileChanges": false,
+  "defaultCommandTimout": 4000,
+  "execTimeout": 60000,
+  "taskTimeout": 60000,
+  "pageLoadTimeout": 6000,
+  "requestTimeout": 5000,
+  "responseTimeout": 30000,
+  "projectId": "m49jk9"
 }
