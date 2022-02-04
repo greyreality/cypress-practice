@@ -3,25 +3,13 @@
 
 # Idea
 .idea
-acm-mobile-appium.iml
 
-# Robot results and reports
+# Results and reports
 report
 report*
-Payload
+cypress/videos/
+cypress/screenshots/
+cypress/videos/*
+cypress/screenshots/*
 node_modules/
-robot-plugin/
-__pycache__
-.pabotsuitenames
 *.log
-*.log.*
-selenium.log.lck
-log.html
-report.html
-output.xml
-
-# csv sample files
-ami-operation-portal/resources/testdata/csv
-
-#from ipa archive
-AppThinning.plist
