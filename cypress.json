@@ -8,5 +8,9 @@
   "pageLoadTimeout": 6000,
   "requestTimeout": 5000,
   "responseTimeout": 30000,
-  "projectId": "m49jk9"
+  "projectId": "m49jk9",
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  }
 }
