@@ -47,7 +47,7 @@ export class ManataLoginPage {
     }
 
     VerifyDefaultPhoneFlag(){
-        cy.get("[class='vti__flag th']").should('exist')     
+        cy.get("[class='vti__flag th']", {timeout: 10000}).should('exist')     
     }
 
     clickCompanyRadiobuttons() {
