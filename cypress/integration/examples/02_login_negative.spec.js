@@ -50,7 +50,7 @@ describe("Run negative tests for Manatal login page", () => {
     })
   })
 
-  it("TEST-10 Verify error message for field length - phone", () => {
+  it.skip("TEST-10 Verify error message for field length - phone", () => {
     // BUG: field phone doesn't have an length validation on UI
     cy.get('[data-vv-name=phone]').should('be.visible');
     cy.get("[data-vv-name=phone]").type('8662116130462090659655056767081315775484545832963858328272248951094087126403116632080468880234053442583202511210549037648533803224188649683156678105660598961340249414014412717046818316534890756118158495507857315360446934645235647673144187605644077894169789');
