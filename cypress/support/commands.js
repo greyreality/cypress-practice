@@ -28,3 +28,13 @@ import '@testing-library/cypress/add-commands';
 Cypress.Commands.add("fillin_username", (username) => {
     cy.get("#name").type(username);
 })
+
+// Cypress.Commands.add("generateEmail", () => {
+//         let random_string = ''
+//         let random_ascii
+//         for (let i = 0; i < 6; i++) {
+//         random_ascii = Math.floor(Math.random() * 25 + 97)
+//         random_string += String.fromCharCode(random_ascii)
+//         }
+//         return random_string
+// })

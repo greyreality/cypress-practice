@@ -1,7 +1,8 @@
 {
     "devDependencies": {
+        "@testing-library/cypress": "latest",
         "cypress": "^9.4.1",
-        "@testing-library/cypress": "latest"
+        "faker": "^5.5.3"
     },
     "dependencies": {}
 }

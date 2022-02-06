@@ -18,3 +18,38 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+class Generator {
+
+    static generate_email(baseEmail) {
+      const faker = require('faker');
+      const uniqueId = `+${faker.datatype.number({min: 10000, max: 99999})}`;
+      return baseEmail.replace('@', `${uniqueId}@`); 
+    }
+
+    static generate_string(length) {
+        const faker = require('faker');
+        const uniqueString = `${faker.random.alphaNumeric(length)}`;
+        return uniqueString
+      }
+
+      static generate_number(length) {
+        const faker = require('faker');
+        const uniqueNumber = `${faker.random.uniqueNumber(length)}`;
+        return uniqueNumber
+      }
+  }
+  
+  Cypress.Commands.add('generateEmail', (baseEmail) => {
+    return Generator.generate_email(baseEmail)
+  })
+
+  Cypress.Commands.add('generateString', (length) => {
+    return Generator.generate_string(length)
+  })
+
+  Cypress.Commands.add('generateNumber', (length) => {
+    return Generator.generate_number(length)
+  })
+
+  export const NewGenerator = new Generator();

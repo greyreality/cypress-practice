@@ -5,12 +5,13 @@
   "defaultCommandTimout": 4000,
   "execTimeout": 60000,
   "taskTimeout": 60000,
-  "pageLoadTimeout": 6000,
+  "pageLoadTimeout": 10000,
   "requestTimeout": 5000,
   "responseTimeout": 30000,
   "projectId": "m49jk9",
   "retries": {
     "runMode": 1,
     "openMode": 0
-  }
+  },
+  "experimentalStudio": true
 }
