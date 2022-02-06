@@ -27,29 +27,20 @@ class Generator {
       return baseEmail.replace('@', `${uniqueId}@`); 
     }
 
-    static generate_string(length) {
+    static generate_string(max) {
         const faker = require('faker');
-        const uniqueString = `${faker.random.alphaNumeric(length)}`;
+        const uniqueString = `${faker.random.alphaNumeric(max)}`;
         return uniqueString
       }
 
-      static generate_number(length) {
-        const faker = require('faker');
-        const uniqueNumber = `${faker.random.uniqueNumber(length)}`;
-        return uniqueNumber
-      }
   }
   
   Cypress.Commands.add('generateEmail', (baseEmail) => {
     return Generator.generate_email(baseEmail)
   })
 
-  Cypress.Commands.add('generateString', (length) => {
-    return Generator.generate_string(length)
-  })
-
-  Cypress.Commands.add('generateNumber', (length) => {
-    return Generator.generate_number(length)
+  Cypress.Commands.add('generateString', (max) => {
+    return Generator.generate_string(max)
   })
 
   export const NewGenerator = new Generator();

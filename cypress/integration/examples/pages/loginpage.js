@@ -2,14 +2,13 @@
 
 export class ManataLoginPage {
     fillinRequiredFields(name, organization_name, password) {
-        // cy.fillin_username(name);
         cy.get("#name").type(name);
         cy.get("#organization_name").type(organization_name);
         cy.get("#password").type(password);
     }
 
     fillinAllFields(name, organization_name, password, phone) {
-        cy.fillin_username(name);
+        cy.get("#name").type(name);
         cy.get("#organization_name").type(organization_name);
         cy.get("#password").type(password);
         cy.get('[data-vv-name=phone]').should('be.visible');
@@ -34,7 +33,7 @@ export class ManataLoginPage {
         cy.contains('Start Your Free Trial').should('not.exist')
 
         // Verify confirm email page
-        cy.contains("Confirm your e-mail address")
+        cy.contains("Confirm your e-mail address").should('exist')
         cy.get("#confirmation-message-e2e-test").then(($confirm) => {
             const confirmText = $confirm.text();
             expect(confirmText).is.eql("A confirmation email was sent to");
@@ -42,12 +41,16 @@ export class ManataLoginPage {
         cy.contains(email)
     }
 
-    VerifyIworkForRadiobuttons(){
+    VerifyIworkForRadiobuttons() {
         cy.findByLabelText('Agency').should('exist')
         cy.findByLabelText('Company').should('exist')
     }
 
-    clickCompanyRadiobuttons(){
+    VerifyDefaultPhoneFlag(){
+        cy.get("[class='vti__flag th']").should('exist')     
+    }
+
+    clickCompanyRadiobuttons() {
         cy.findByLabelText('Company').click();
     }
 
@@ -57,6 +60,10 @@ export class ManataLoginPage {
 
     clickSingUpButton() {
         cy.get('.signup-material-button-contained').click();
+    }
+    
+    clickCountryCodeDropdown() {
+        cy.get("[class='vti__dropdown-arrow']").click();
     }
 }
 

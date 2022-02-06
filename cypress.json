@@ -10,8 +10,8 @@
   "responseTimeout": 30000,
   "projectId": "m49jk9",
   "retries": {
-    "runMode": 1,
-    "openMode": 0
+    "runMode": 0,
+    "openMode": 1
   },
   "experimentalStudio": true
 }
