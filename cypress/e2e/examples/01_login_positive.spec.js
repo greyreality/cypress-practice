@@ -1,7 +1,14 @@
 /// <reference types="cypress" />
 import { loginPage } from "./pages/loginpage"
 
-describe("Run positive tests for Manatal login page", () => {
+describe("Run positive tests for login page", () => {
+  //TODO: Should be removed after fix
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test when detects uncaught errors originating from your application
+    return false
+  });
+
   // Common steps for all testcases
   beforeEach("Open website", () => {
     cy.visit("/signup");

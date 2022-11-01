@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-export class ManataLoginPage {
+export class LoginPage {
     fillinRequiredFields(name, organization_name, password) {
         cy.get("#name").type(name);
         cy.get("#organization_name").type(organization_name);
@@ -67,4 +67,4 @@ export class ManataLoginPage {
     }
 }
 
-export const loginPage = new ManataLoginPage();
+export const loginPage = new LoginPage();
